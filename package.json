@@ -1,0 +1,46 @@
+{
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "better-auth": "^1.6.5",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  },
+  "name": "@incamax/better-auth-postgrest-adapter",
+  "version": "1.0.0",
+  "description": "A fast, lightweight and high-performance PostgREST adapter for Better Auth.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "lint": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" & exit 1"
+  },
+  "files": [
+    "dist",
+    "function.sql",
+    "README.md"
+  ],
+  "dependencies": {
+    "@supabase/postgrest-js": "^2.103.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Incamax/better-auth-postgrest-adapter.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Incamax/better-auth-postgrest-adapter/issues"
+  },
+  "homepage": "https://github.com/Incamax/better-auth-postgrest-adapter#readme"
+}
